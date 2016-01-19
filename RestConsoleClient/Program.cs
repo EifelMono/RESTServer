@@ -38,7 +38,7 @@ namespace RestConsoleClient
                                 {
                                     RestRequest request = new RestRequest("User/{id}", RestSharp.Portable.Method.GET);
                                     request.AddUrlSegment("id", 1);
-                                    var response = await client.Execute(request);
+                                    var response = await client.Execute<string>(request);
                                     Console.WriteLine($"User Response Text={Encoding.UTF8.GetString(response.RawBytes)}");
                                     break;
                                 }
