@@ -15,7 +15,7 @@ namespace RESTServer
         public Module()
             : base()
         {
-            Get("/", _ => Response.AsRedirect("/swagger-ui/dist/index.html"), null, "Home");
+            Get("/", _ => Response.AsRedirect("/swagger-ui/dist/index.html"), null, "PROGRAMM");
 
             // Get("/swagger-ui/dist/index.html", _ => Response.AsFile("swagger-ui/dist/index.html"), null, "Home");
 
