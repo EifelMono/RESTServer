@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RESTServer</RootNamespace>
     <AssemblyName>RESTServer</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -45,29 +45,257 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Nancy.Hosting.Self, Version=1.4.1.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Nancy.Hosting.Self.1.4.1\lib\net40\Nancy.Hosting.Self.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp.Portable.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f">
-      <HintPath>..\packages\FubarCoder.RestSharp.Portable.Core.3.1.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\RestSharp.Portable.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp.Portable.HttpClient, Version=3.1.0.0, Culture=neutral, PublicKeyToken=be81bb0f53eab22f">
-      <HintPath>..\packages\FubarCoder.RestSharp.Portable.HttpClient.3.1.0\lib\net45\RestSharp.Portable.HttpClient.dll</HintPath>
-    </Reference>
     <Reference Include="Nancy">
-      <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
+      <HintPath>..\packages\Nancy.2.0.0-clinteastwood\lib\net452\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self">
+      <HintPath>..\packages\Nancy.Hosting.Self.2.0.0-clinteastwood\lib\net452\Nancy.Hosting.Self.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Metadata.Modules">
+      <HintPath>..\packages\Nancy.Metadata.Modules.2.0.0-barneyrubble\lib\net452\Nancy.Metadata.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Swagger.ObjectModel">
+      <HintPath>..\packages\Swagger.ObjectModel.2.2.6-alpha\lib\net452\Swagger.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Swagger">
+      <HintPath>..\packages\Nancy.Swagger.2.2.6-alpha\lib\net452\Nancy.Swagger.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Swagger.Annotations">
+      <HintPath>..\packages\Nancy.Swagger.Annotations.2.2.6-alpha\lib\net452\Nancy.Swagger.Annotations.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\.dockerignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\.gitattributes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\.gitignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\.jshintignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\.jshintrc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\.npmignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\.travis.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\CONTRIBUTING.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\ISSUE_TEMPLATE.md" />
+    <None Include="swagger-ui\LICENSE" />
+    <None Include="swagger-ui\README.md" />
+    <None Include="swagger-ui\bower.json" />
+    <None Include="swagger-ui\composer.json" />
+    <None Include="swagger-ui\gulpfile.js" />
+    <None Include="swagger-ui\index.js" />
+    <None Include="swagger-ui\karma.conf.js" />
+    <None Include="swagger-ui\nginx.conf" />
+    <None Include="swagger-ui\package.json" />
+    <None Include="swagger-ui\dist\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\o2c.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\swagger-ui.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\swagger-ui.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\css\print.css" />
+    <None Include="swagger-ui\dist\css\reset.css" />
+    <None Include="swagger-ui\dist\css\screen.css" />
+    <None Include="swagger-ui\dist\css\style.css" />
+    <None Include="swagger-ui\dist\css\typography.css" />
+    <None Include="swagger-ui\dist\fonts\DroidSans-Bold.ttf" />
+    <None Include="swagger-ui\dist\fonts\DroidSans.ttf" />
+    <None Include="swagger-ui\dist\images\collapse.gif" />
+    <None Include="swagger-ui\dist\images\expand.gif" />
+    <None Include="swagger-ui\dist\images\explorer_icons.png" />
+    <None Include="swagger-ui\dist\images\favicon-16x16.png" />
+    <None Include="swagger-ui\dist\images\favicon-32x32.png" />
+    <None Include="swagger-ui\dist\images\favicon.ico" />
+    <None Include="swagger-ui\dist\images\logo_small.png" />
+    <None Include="swagger-ui\dist\images\pet_store_api.png" />
+    <None Include="swagger-ui\dist\images\throbber.gif" />
+    <None Include="swagger-ui\dist\images\wordnik_api.png" />
+    <None Include="swagger-ui\dist\lang\ca.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\el.js" />
+    <None Include="swagger-ui\dist\lang\en.js" />
+    <None Include="swagger-ui\dist\lang\es.js" />
+    <None Include="swagger-ui\dist\lang\fr.js" />
+    <None Include="swagger-ui\dist\lang\geo.js" />
+    <None Include="swagger-ui\dist\lang\it.js" />
+    <None Include="swagger-ui\dist\lang\ja.js" />
+    <None Include="swagger-ui\dist\lang\ko-kr.js" />
+    <None Include="swagger-ui\dist\lang\pl.js" />
+    <None Include="swagger-ui\dist\lang\pt.js" />
+    <None Include="swagger-ui\dist\lang\ru.js" />
+    <None Include="swagger-ui\dist\lang\tr.js" />
+    <None Include="swagger-ui\dist\lang\translator.js" />
+    <None Include="swagger-ui\dist\lang\zh-cn.js" />
+    <None Include="swagger-ui\dist\lib\backbone-min.js" />
+    <None Include="swagger-ui\dist\lib\es5-shim.js" />
+    <None Include="swagger-ui\dist\lib\handlebars-4.0.5.js" />
+    <None Include="swagger-ui\dist\lib\highlight.9.1.0.pack.js" />
+    <None Include="swagger-ui\dist\lib\highlight.9.1.0.pack_extended.js" />
+    <None Include="swagger-ui\dist\lib\jquery-1.8.0.min.js" />
+    <None Include="swagger-ui\dist\lib\jquery.ba-bbq.min.js" />
+    <None Include="swagger-ui\dist\lib\jquery.slideto.min.js" />
+    <None Include="swagger-ui\dist\lib\jquery.wiggle.min.js" />
+    <None Include="swagger-ui\dist\lib\js-yaml.min.js" />
+    <None Include="swagger-ui\dist\lib\jsoneditor.min.js" />
+    <None Include="swagger-ui\dist\lib\lodash.min.js" />
+    <None Include="swagger-ui\dist\lib\marked.js" />
+    <None Include="swagger-ui\dist\lib\object-assign-pollyfill.js" />
+    <None Include="swagger-ui\dist\lib\sanitize-html.min.js" />
+    <None Include="swagger-ui\dist\lib\swagger-oauth.js" />
+    <None Include="swagger-ui\lang\ca.js" />
+    <None Include="swagger-ui\lang\el.js" />
+    <None Include="swagger-ui\lang\en.js" />
+    <None Include="swagger-ui\lang\es.js" />
+    <None Include="swagger-ui\lang\fr.js" />
+    <None Include="swagger-ui\lang\geo.js" />
+    <None Include="swagger-ui\lang\it.js" />
+    <None Include="swagger-ui\lang\ja.js" />
+    <None Include="swagger-ui\lang\ko-kr.js" />
+    <None Include="swagger-ui\lang\pl.js" />
+    <None Include="swagger-ui\lang\pt.js" />
+    <None Include="swagger-ui\lang\ru.js" />
+    <None Include="swagger-ui\lang\tr.js" />
+    <None Include="swagger-ui\lang\translator.js" />
+    <None Include="swagger-ui\lang\zh-cn.js" />
+    <None Include="swagger-ui\lib\backbone-min.js" />
+    <None Include="swagger-ui\lib\handlebars-4.0.5.js" />
+    <None Include="swagger-ui\lib\highlight.9.1.0.pack.js" />
+    <None Include="swagger-ui\lib\highlight.9.1.0.pack_extended.js" />
+    <None Include="swagger-ui\lib\jquery-1.8.0.min.js" />
+    <None Include="swagger-ui\lib\jquery.ba-bbq.min.js" />
+    <None Include="swagger-ui\lib\jquery.slideto.min.js" />
+    <None Include="swagger-ui\lib\jquery.wiggle.min.js" />
+    <None Include="swagger-ui\lib\js-yaml.min.js" />
+    <None Include="swagger-ui\lib\jsoneditor.min.js" />
+    <None Include="swagger-ui\lib\lodash.min.js" />
+    <None Include="swagger-ui\lib\marked.js" />
+    <None Include="swagger-ui\lib\object-assign-pollyfill.js" />
+    <None Include="swagger-ui\lib\sanitize-html.min.js" />
+    <None Include="swagger-ui\lib\swagger-oauth.js" />
+    <None Include="swagger-ui\src\main\html\index.html" />
+    <None Include="swagger-ui\src\main\html\o2c.html" />
+    <None Include="swagger-ui\src\main\html\css\print.css" />
+    <None Include="swagger-ui\src\main\html\css\reset.css" />
+    <None Include="swagger-ui\src\main\html\css\screen.css" />
+    <None Include="swagger-ui\src\main\html\css\style.css" />
+    <None Include="swagger-ui\src\main\html\css\typography.css" />
+    <None Include="swagger-ui\src\main\html\fonts\DroidSans-Bold.ttf" />
+    <None Include="swagger-ui\src\main\html\fonts\DroidSans.ttf" />
+    <None Include="swagger-ui\src\main\html\images\collapse.gif" />
+    <None Include="swagger-ui\src\main\html\images\expand.gif" />
+    <None Include="swagger-ui\src\main\html\images\explorer_icons.png" />
+    <None Include="swagger-ui\src\main\html\images\favicon-16x16.png" />
+    <None Include="swagger-ui\src\main\html\images\favicon-32x32.png" />
+    <None Include="swagger-ui\src\main\html\images\favicon.ico" />
+    <None Include="swagger-ui\src\main\html\images\logo_small.png" />
+    <None Include="swagger-ui\src\main\html\images\pet_store_api.png" />
+    <None Include="swagger-ui\src\main\html\images\throbber.gif" />
+    <None Include="swagger-ui\src\main\html\images\wordnik_api.png" />
+    <None Include="swagger-ui\src\main\javascript\SwaggerUi.js" />
+    <None Include="swagger-ui\src\main\javascript\doc.js" />
+    <None Include="swagger-ui\src\main\javascript\helpers\handlebars.js" />
+    <None Include="swagger-ui\src\main\javascript\utils\utils.js" />
+    <None Include="swagger-ui\src\main\javascript\view\ApiKeyAuthModel.js" />
+    <None Include="swagger-ui\src\main\javascript\view\ApiKeyAuthView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\AuthButtonView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\AuthView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\AuthsCollection.js" />
+    <None Include="swagger-ui\src\main\javascript\view\AuthsCollectionView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\BasicAuthModel.js" />
+    <None Include="swagger-ui\src\main\javascript\view\BasicAuthView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\ContentTypeView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\HeaderView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\MainView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\Oauth2Model.js" />
+    <None Include="swagger-ui\src\main\javascript\view\Oauth2View.js" />
+    <None Include="swagger-ui\src\main\javascript\view\OperationView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\ParameterContentTypeView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\ParameterView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\PopupView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\ResourceView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\ResponseContentTypeView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\SignatureView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\StatusCodeView.js" />
+    <None Include="swagger-ui\src\main\javascript\view\partials\signature.js" />
+    <None Include="swagger-ui\src\main\less\auth.less" />
+    <None Include="swagger-ui\src\main\less\highlight_default.less" />
+    <None Include="swagger-ui\src\main\less\print.less" />
+    <None Include="swagger-ui\src\main\less\reset.less" />
+    <None Include="swagger-ui\src\main\less\screen.less" />
+    <None Include="swagger-ui\src\main\less\specs.less" />
+    <None Include="swagger-ui\src\main\less\style.less" />
+    <None Include="swagger-ui\src\main\template\apikey_auth.handlebars" />
+    <None Include="swagger-ui\src\main\template\auth_button.handlebars" />
+    <None Include="swagger-ui\src\main\template\auth_button_operation.handlebars" />
+    <None Include="swagger-ui\src\main\template\auth_view.handlebars" />
+    <None Include="swagger-ui\src\main\template\basic_auth.handlebars" />
+    <None Include="swagger-ui\src\main\template\content_type.handlebars" />
+    <None Include="swagger-ui\src\main\template\main.handlebars" />
+    <None Include="swagger-ui\src\main\template\oauth2.handlebars" />
+    <None Include="swagger-ui\src\main\template\operation.handlebars" />
+    <None Include="swagger-ui\src\main\template\param.handlebars" />
+    <None Include="swagger-ui\src\main\template\param_list.handlebars" />
+    <None Include="swagger-ui\src\main\template\param_readonly.handlebars" />
+    <None Include="swagger-ui\src\main\template\param_readonly_required.handlebars" />
+    <None Include="swagger-ui\src\main\template\param_required.handlebars" />
+    <None Include="swagger-ui\src\main\template\parameter_content_type.handlebars" />
+    <None Include="swagger-ui\src\main\template\popup.handlebars" />
+    <None Include="swagger-ui\src\main\template\resource.handlebars" />
+    <None Include="swagger-ui\src\main\template\response_content_type.handlebars" />
+    <None Include="swagger-ui\src\main\template\signature.handlebars" />
+    <None Include="swagger-ui\src\main\template\status_code.handlebars" />
+    <None Include="swagger-ui\src\main\template\templates.js" />
+    <None Include="swagger-ui\test\.jshintrc" />
+    <None Include="swagger-ui\test\mocha.opts" />
+    <None Include="swagger-ui\test\e2e\driver.js" />
+    <None Include="swagger-ui\test\e2e\helpers.js" />
+    <None Include="swagger-ui\test\e2e\servers.js" />
+    <None Include="swagger-ui\test\e2e\v1.js" />
+    <None Include="swagger-ui\test\e2e\v2\petstore.js" />
+    <None Include="swagger-ui\test\specs\v1.2\petstore\api-docs.json" />
+    <None Include="swagger-ui\test\specs\v1.2\petstore\pet.json" />
+    <None Include="swagger-ui\test\specs\v1.2\petstore\store.json" />
+    <None Include="swagger-ui\test\specs\v1.2\petstore\user.json" />
+    <None Include="swagger-ui\test\specs\v2\formats.yaml" />
+    <None Include="swagger-ui\test\specs\v2\petstore.json" />
+    <None Include="swagger-ui\test\unit\mock.js" />
+    <None Include="swagger-ui\test\unit\view\partials\signatureSpec.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RESTLib\RESTLib.csproj">
