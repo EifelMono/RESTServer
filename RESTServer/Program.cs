@@ -6,9 +6,11 @@ using RESTLib;
 using System.Threading;
 using System.Runtime.Remoting.Messaging;
 using System.Data.SqlTypes;
+using Nancy.Swagger.Annotations.Attributes;
 
 namespace RESTServer
 {
+    [Model("HOME1")]
     public class Module : NancyModule
     {
 

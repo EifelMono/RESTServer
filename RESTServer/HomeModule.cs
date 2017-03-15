@@ -13,7 +13,7 @@ namespace RESTServer
         public int Age { get; set; }
     }
 
-    [Model("HOME")]
+    [Model("HOME2")]
     public class HomeModule : NancyModule
     {
         public HomeModule()
@@ -36,8 +36,10 @@ namespace RESTServer
         }
 
         public static List<User> Users = new List<User> { new User { Name = "Vincent Vega", Age = 45 } };
+
+
         [Route("GetUsers")]
-        [Route(HttpMethod.Get, "/users")]
+        [Route(HttpMethod.Get, "/users", Notes = "NOTES", Summary = "SUMMARY", Tags = new string[] {"Hallo", "Hallo2", "Hallo3"})]
         [SwaggerResponse(HttpStatusCode.OK, Message = "OK", Model = typeof(IEnumerable<User>))]
         private IEnumerable<User> GetUsers()
         {

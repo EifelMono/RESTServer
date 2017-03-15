@@ -14,10 +14,10 @@ namespace RestServer
 	{
 		protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
 		{
-			SwaggerMetadataProvider.SetInfo("RESTServer Example with doc", "v0", "RESTServer service", new Contact()
+			SwaggerMetadataProvider.SetInfo("RESTServer Example with doc", "Version 1.0", "RESTServer service", new Contact()
 			{
 				EmailAddress = "andreas@klapperich.de"
-			});
+			},"TermsOfService");
 
 			base.ApplicationStartup(container, pipelines);
 
