@@ -128,56 +128,150 @@
     <None Include="swagger-ui\dist\swagger-ui.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="swagger-ui\dist\css\print.css" />
-    <None Include="swagger-ui\dist\css\reset.css" />
-    <None Include="swagger-ui\dist\css\screen.css" />
-    <None Include="swagger-ui\dist\css\style.css" />
-    <None Include="swagger-ui\dist\css\typography.css" />
-    <None Include="swagger-ui\dist\fonts\DroidSans-Bold.ttf" />
-    <None Include="swagger-ui\dist\fonts\DroidSans.ttf" />
-    <None Include="swagger-ui\dist\images\collapse.gif" />
-    <None Include="swagger-ui\dist\images\expand.gif" />
-    <None Include="swagger-ui\dist\images\explorer_icons.png" />
-    <None Include="swagger-ui\dist\images\favicon-16x16.png" />
-    <None Include="swagger-ui\dist\images\favicon-32x32.png" />
-    <None Include="swagger-ui\dist\images\favicon.ico" />
-    <None Include="swagger-ui\dist\images\logo_small.png" />
-    <None Include="swagger-ui\dist\images\pet_store_api.png" />
-    <None Include="swagger-ui\dist\images\throbber.gif" />
-    <None Include="swagger-ui\dist\images\wordnik_api.png" />
+    <None Include="swagger-ui\dist\css\print.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\css\reset.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\css\screen.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\css\style.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\css\typography.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\fonts\DroidSans-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\fonts\DroidSans.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\collapse.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\expand.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\explorer_icons.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\favicon-16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\favicon-32x32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\logo_small.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\pet_store_api.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\throbber.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\images\wordnik_api.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="swagger-ui\dist\lang\ca.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="swagger-ui\dist\lang\el.js" />
-    <None Include="swagger-ui\dist\lang\en.js" />
-    <None Include="swagger-ui\dist\lang\es.js" />
-    <None Include="swagger-ui\dist\lang\fr.js" />
-    <None Include="swagger-ui\dist\lang\geo.js" />
-    <None Include="swagger-ui\dist\lang\it.js" />
-    <None Include="swagger-ui\dist\lang\ja.js" />
-    <None Include="swagger-ui\dist\lang\ko-kr.js" />
-    <None Include="swagger-ui\dist\lang\pl.js" />
-    <None Include="swagger-ui\dist\lang\pt.js" />
-    <None Include="swagger-ui\dist\lang\ru.js" />
-    <None Include="swagger-ui\dist\lang\tr.js" />
-    <None Include="swagger-ui\dist\lang\translator.js" />
-    <None Include="swagger-ui\dist\lang\zh-cn.js" />
-    <None Include="swagger-ui\dist\lib\backbone-min.js" />
-    <None Include="swagger-ui\dist\lib\es5-shim.js" />
-    <None Include="swagger-ui\dist\lib\handlebars-4.0.5.js" />
-    <None Include="swagger-ui\dist\lib\highlight.9.1.0.pack.js" />
-    <None Include="swagger-ui\dist\lib\highlight.9.1.0.pack_extended.js" />
-    <None Include="swagger-ui\dist\lib\jquery-1.8.0.min.js" />
-    <None Include="swagger-ui\dist\lib\jquery.ba-bbq.min.js" />
-    <None Include="swagger-ui\dist\lib\jquery.slideto.min.js" />
-    <None Include="swagger-ui\dist\lib\jquery.wiggle.min.js" />
-    <None Include="swagger-ui\dist\lib\js-yaml.min.js" />
-    <None Include="swagger-ui\dist\lib\jsoneditor.min.js" />
-    <None Include="swagger-ui\dist\lib\lodash.min.js" />
-    <None Include="swagger-ui\dist\lib\marked.js" />
-    <None Include="swagger-ui\dist\lib\object-assign-pollyfill.js" />
-    <None Include="swagger-ui\dist\lib\sanitize-html.min.js" />
-    <None Include="swagger-ui\dist\lib\swagger-oauth.js" />
+    <None Include="swagger-ui\dist\lang\el.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\en.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\es.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\fr.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\geo.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\it.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\ja.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\ko-kr.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\pl.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\pt.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\ru.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\tr.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\translator.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lang\zh-cn.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\backbone-min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\es5-shim.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\handlebars-4.0.5.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\highlight.9.1.0.pack.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\highlight.9.1.0.pack_extended.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\jquery-1.8.0.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\jquery.ba-bbq.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\jquery.slideto.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\jquery.wiggle.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\js-yaml.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\jsoneditor.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\lodash.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\marked.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\object-assign-pollyfill.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\sanitize-html.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="swagger-ui\dist\lib\swagger-oauth.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="swagger-ui\lang\ca.js" />
     <None Include="swagger-ui\lang\el.js" />
     <None Include="swagger-ui\lang\en.js" />
